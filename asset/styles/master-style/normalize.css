@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'conthrax';
+    src: url(../../font/Conthrax/conthrax-sb.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(../../font/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../../font/Montserrat/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(../../font/Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(../../font/Montserrat/Montserrat-Bold.ttf);
+}
+/* ------------------------------------------------------------------------------ */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+}
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.row>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container-fluid,
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}

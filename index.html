@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- -------------------------master styles------------------------------------ -->
+    <link rel="stylesheet" href="asset/styles/master-style/normalize.css">
+    <link rel="stylesheet" href="asset/styles/master-style/master.css">
+    <link rel="stylesheet" href="asset/styles/master-style/Background.css">
+    <link rel="stylesheet" href="asset/styles/master-style/local.css">
+    <!-- -------------------------cantact styles------------------------------------ -->
+    <link rel="stylesheet" href="asset/styles/contact-style/contact.master.css">
+    <link rel="stylesheet" href="asset/styles/contact-style/contact-local.css">
+    <!-- -------------------------about styles------------------------------------ -->
+    <script src="asset/js/master.js"></script>
+    <script src="https://kit.fontawesome.com/25dc46b7d1.js" crossorigin="anonymous"></script>
+    <title>Mehrab Poorzakaria</title>
+    <link rel="icon" href="asset/img/title-logo.png" type="image/png" />
+</head>
+
+<body translate="no">
+    <h1>
+        i'm mehrab <br> poorzakaria
+    </h1>
+    <h3 id="about-btn" class="d-none d-lg-block">
+        about
+    </h3>
+    <h3 id="contact-btn" onclick="open_contact()" class="d-none d-lg-block">
+        contact
+    </h3>
+    <h3 id="strength-btn" class="d-none d-lg-block">
+        strength
+    </h3>
+    <h3 id="portfolio-btn" class="d-none d-lg-block">
+        portfolio
+    </h3>
+    <div id="menu-mobile" class="d-lg-none">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <!-- ---------------------------------pages----------------------------------- -->
+    <!-- ---------------------------contact---------------------------- -->
+    <section id="contact">
+        <div id="contact-close" onclick="close_contact()">
+            <i class="fa-solid fa-chevron-left d-none d-lg-block"></i>
+            <i class="fa-solid fa-circle-xmark d-lg-none"></i>
+        </div>
+        <section id="contact-box">
+            <div id="contact-box-title">
+                <h3>
+                    can i help you? <br>
+                    contact me
+                </h3>
+            </div>
+            <div id="contact-box-contetn" class="row">
+                <!-- --------------------------info------------------------------- -->
+                <section id="box-contetn-info" class="col-12 col-lg-6">
+                    <div class="info-card">
+                        <div id="info-card-img">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div id="info-card-text">
+                            <h3>mmehrab.pk@gmail.com</h3>
+                            <p>Send us your query anytime!</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div id="info-card-img">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+                        <div id="info-card-text">
+                            <h3>(+98) 938-021-4082</h3>
+                            <p>Mon to Fri 9am to 6pm</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div id="info-card-img">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div id="info-card-text">
+                            <h3>tehran, iran</h3>
+                            <p>you can find me here</p>
+                        </div>
+                    </div>
+                    <div id="social">
+                        <a href="https://www.linkedin.com/in/mehrab-poorzakaria-1b2492237/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/mmehrab-pz">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mehrab.poorzakaria_web/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/message/KPKBI2KRNQMOK1">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </section>
+                <!-- --------------------------form------------------------------- -->
+                <section id="box-contetn-form" class="col-12 col-lg-6">
+                    <form action="#">
+                        <input type="text" placeholder="name">
+                        <input type="email" placeholder="email">
+                        <input type="text" placeholder="object">
+                        <textarea name="" id="" cols="" rows="" placeholder="your message"></textarea>
+                        <button>
+                            send
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </section>
+    <canvas></canvas>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const STAR_COLOR = '#fff';
+    const STAR_SIZE = 3;
+    const STAR_MIN_SCALE = 0.2;
+    const OVERFLOW_THRESHOLD = 50;
+    const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
+
+    const canvas = document.querySelector('canvas'),
+        context = canvas.getContext('2d');
+
+    let scale = 1, // device pixel ratio
+        width,
+        height;
+
+    let stars = [];
+
+    let pointerX,
+        pointerY;
+
+    let velocity = {
+        x: 0,
+        y: 0,
+        tx: 0,
+        ty: 0,
+        z: 0.0005
+    };
+
+    let touchInput = false;
+
+    generate();
+    resize();
+    step();
+
+    window.onresize = resize;
+    canvas.onmousemove = onMouseMove;
+    canvas.ontouchmove = onTouchMove;
+    canvas.ontouchend = onMouseLeave;
+    document.onmouseleave = onMouseLeave;
+
+    function generate() {
+
+        for (let i = 0; i < STAR_COUNT; i++) {
+            stars.push({
+                x: 0,
+                y: 0,
+                z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
+            });
+        }
+
+    }
+
+    function placeStar(star) {
+
+        star.x = Math.random() * width;
+        star.y = Math.random() * height;
+
+    }
+
+    function recycleStar(star) {
+
+        let direction = 'z';
+
+        let vx = Math.abs(velocity.x),
+            vy = Math.abs(velocity.y);
+
+        if (vx > 1 || vy > 1) {
+            let axis;
+
+            if (vx > vy) {
+                axis = Math.random() < vx / (vx + vy) ? 'h' : 'v';
+            } else {
+                axis = Math.random() < vy / (vx + vy) ? 'v' : 'h';
+            }
+
+            if (axis === 'h') {
+                direction = velocity.x > 0 ? 'l' : 'r';
+            } else {
+                direction = velocity.y > 0 ? 't' : 'b';
+            }
+        }
+
+        star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE);
+
+        if (direction === 'z') {
+            star.z = 0.1;
+            star.x = Math.random() * width;
+            star.y = Math.random() * height;
+        } else if (direction === 'l') {
+            star.x = -OVERFLOW_THRESHOLD;
+            star.y = height * Math.random();
+        } else if (direction === 'r') {
+            star.x = width + OVERFLOW_THRESHOLD;
+            star.y = height * Math.random();
+        } else if (direction === 't') {
+            star.x = width * Math.random();
+            star.y = -OVERFLOW_THRESHOLD;
+        } else if (direction === 'b') {
+            star.x = width * Math.random();
+            star.y = height + OVERFLOW_THRESHOLD;
+        }
+
+    }
+
+    function resize() {
+
+        scale = window.devicePixelRatio || 1;
+
+        width = window.innerWidth * scale;
+        height = window.innerHeight * scale;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        stars.forEach(placeStar);
+
+    }
+
+    function step() {
+
+        context.clearRect(0, 0, width, height);
+
+        update();
+        render();
+
+        requestAnimationFrame(step);
+
+    }
+
+    function update() {
+
+        velocity.tx *= 0.96;
+        velocity.ty *= 0.96;
+
+        velocity.x += (velocity.tx - velocity.x) * 0.8;
+        velocity.y += (velocity.ty - velocity.y) * 0.8;
+
+        stars.forEach((star) => {
+
+            star.x += velocity.x * star.z;
+            star.y += velocity.y * star.z;
+
+            star.x += (star.x - width / 2) * velocity.z * star.z;
+            star.y += (star.y - height / 2) * velocity.z * star.z;
+            star.z += velocity.z;
+
+            // recycle when out of bounds
+            if (star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -
+                OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD) {
+                recycleStar(star);
+            }
+
+        });
+
+    }
+
+    function render() {
+
+        stars.forEach((star) => {
+
+            context.beginPath();
+            context.lineCap = 'round';
+            context.lineWidth = STAR_SIZE * star.z * scale;
+            context.globalAlpha = 0.5 + 0.5 * Math.random();
+            context.strokeStyle = STAR_COLOR;
+
+            context.beginPath();
+            context.moveTo(star.x, star.y);
+
+            var tailX = velocity.x * 2,
+                tailY = velocity.y * 2;
+
+            // stroke() wont work on an invisible line
+            if (Math.abs(tailX) < 0.1) tailX = 0.5;
+            if (Math.abs(tailY) < 0.1) tailY = 0.5;
+
+            context.lineTo(star.x + tailX, star.y + tailY);
+
+            context.stroke();
+
+        });
+
+    }
+
+    function movePointer(x, y) {
+
+        if (typeof pointerX === 'number' && typeof pointerY === 'number') {
+
+            let ox = x - pointerX,
+                oy = y - pointerY;
+
+            velocity.tx = velocity.tx + (ox / 8 * scale) * (touchInput ? 1 : -1);
+            velocity.ty = velocity.ty + (oy / 8 * scale) * (touchInput ? 1 : -1);
+
+        }
+
+        pointerX = x;
+        pointerY = y;
+
+    }
+
+    function onMouseMove(event) {
+
+        touchInput = false;
+
+        movePointer(event.clientX, event.clientY);
+
+    }
+
+    function onTouchMove(event) {
+
+        touchInput = true;
+
+        movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
+
+        event.preventDefault();
+
+    }
+
+    function onMouseLeave() {
+
+        pointerX = null;
+        pointerY = null;
+
+    }
+</script>
+
+</html>
