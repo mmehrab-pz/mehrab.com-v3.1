@@ -1,0 +1,38 @@
+#strength {
+  width: 100%;
+  height: 300vh;
+  background: #16222A;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  transform-origin: bottom;
+}
+
+#strength-back {
+  position: fixed;
+}
+
+#strength-close {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  transform: rotate(90deg);
+  z-index: 10;
+}
+#strength-close > i {
+  font-size: 40px;
+  color: #b5c3ca;
+  transition: 0.4s ease-in-out;
+}
+#strength-close:hover > i {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=strength-master.css.map */

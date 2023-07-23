@@ -13,11 +13,14 @@
     <link rel="stylesheet" href="asset/styles/master-style/normalize.css">
     <link rel="stylesheet" href="asset/styles/master-style/master.css">
     <link rel="stylesheet" href="asset/styles/master-style/Background.css">
+    <link rel="stylesheet" href="asset/styles/master-style/animation.css">
     <link rel="stylesheet" href="asset/styles/master-style/local.css">
     <!-- -------------------------cantact styles------------------------------------ -->
     <link rel="stylesheet" href="asset/styles/contact-style/contact.master.css">
     <link rel="stylesheet" href="asset/styles/contact-style/contact-local.css">
-    <!-- -------------------------about styles------------------------------------ -->
+    <!-- -------------------------strength styles------------------------------------ -->
+    <link rel="stylesheet" href="asset/styles/strength-style/strength-master.css">
+    <!-- -------------------------portfolio styles------------------------------------ -->
     <script src="asset/js/master.js"></script>
     <script src="https://kit.fontawesome.com/25dc46b7d1.js" crossorigin="anonymous"></script>
     <title>Mehrab Poorzakaria</title>
@@ -34,7 +37,7 @@
     <h3 id="contact-btn" onclick="open_contact()" class="d-none d-lg-block">
         contact
     </h3>
-    <h3 id="strength-btn" class="d-none d-lg-block">
+    <h3 id="strength-btn" onclick="open_strength()" class="d-none d-lg-block">
         strength
     </h3>
     <h3 id="portfolio-btn" class="d-none d-lg-block">
@@ -48,8 +51,9 @@
     <section id="contact">
         <div id="contact-close" onclick="close_contact()">
             <i class="fa-solid fa-chevron-left d-none d-lg-block"></i>
-            <i class="fa-solid fa-circle-xmark d-lg-none"></i>
+            <div class="d-lg-none"></div>
         </div>
+        <video id="contact-back" src="asset/img/back-video-8.mp4" autoplay muted loop></video>
         <section id="contact-box">
             <div id="contact-box-title">
                 <h3>
@@ -118,6 +122,26 @@
             </div>
         </section>
     </section>
+    <!-- ---------------------------strength---------------------------- -->
+    <section id="strength">
+        <div id="strength-close" onclick="close_strength()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <video id="strength-back" src="asset/img/back-video-8.mp4" autoplay muted loop></video>
+        <section></section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
     <canvas></canvas>
 </body>
 

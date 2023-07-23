@@ -2,22 +2,27 @@
     font-family: 'conthrax';
     src: url(../../font/Conthrax/conthrax-sb.ttf);
 }
+
 @font-face {
     font-family: 'Montserrat-Regular';
     src: url(../../font/Montserrat/Montserrat-Regular.ttf);
 }
+
 @font-face {
     font-family: 'Montserrat-Medium';
     src: url(../../font/Montserrat/Montserrat-Medium.ttf);
 }
+
 @font-face {
     font-family: 'Montserrat-SemiBold';
     src: url(../../font/Montserrat/Montserrat-SemiBold.ttf);
 }
+
 @font-face {
     font-family: 'Montserrat-Bold';
     src: url(../../font/Montserrat/Montserrat-Bold.ttf);
 }
+
 /* ------------------------------------------------------------------------------ */
 body {
     width: 100%;
@@ -25,6 +30,15 @@ body {
     background-color: #000;
     background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
         radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-image: -webkit-linear-gradient(45deg, #673ab7 0%, #4caf50 0%, #03a9f4 100%);
+        border-radius: 15px;
+    }
 }
 
 *,

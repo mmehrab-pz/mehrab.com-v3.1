@@ -1,20 +1,23 @@
+body {
+  position: relative;
+}
 body > h1 {
   font-size: 150px;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  margin: auto;
+  z-index: 1;
   text-transform: capitalize;
   font-family: "Montserrat-Bold";
   text-align: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #673ab7;
-  background-image: -webkit-linear-gradient(45deg, #673ab7 0%, #4caf50 0%, #03a9f4 100%);
+  color: white;
 }
 body > h3 {
   font-family: "Montserrat-SemiBold";
