@@ -22,7 +22,7 @@
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 50px;
   transform: rotate(90deg);
@@ -30,7 +30,7 @@
 }
 #strength-close > i {
   font-size: 40px;
-  color: #b5c3ca;
+  color: #3A6DF0;
   transition: 0.4s ease-in-out;
 }
 #strength-close:hover > i {

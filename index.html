@@ -21,6 +21,9 @@
     <!-- -------------------------strength styles------------------------------------ -->
     <link rel="stylesheet" href="asset/styles/strength-style/strength-master.css">
     <!-- -------------------------portfolio styles------------------------------------ -->
+    <link rel="stylesheet" href="asset/styles/portfolio-style/portfolio-master.css">
+    <link rel="stylesheet" href="asset/styles/portfolio-style/portfolio-local.css">
+    <!-- -------------------------about styles------------------------------------ -->
     <script src="asset/js/master.js"></script>
     <script src="https://kit.fontawesome.com/25dc46b7d1.js" crossorigin="anonymous"></script>
     <title>Mehrab Poorzakaria</title>
@@ -40,7 +43,7 @@
     <h3 id="strength-btn" onclick="open_strength()" class="d-none d-lg-block">
         strength
     </h3>
-    <h3 id="portfolio-btn" class="d-none d-lg-block">
+    <h3 id="portfolio-btn" onclick="open_portfolio()" class="d-none d-lg-block">
         portfolio
     </h3>
     <div id="menu-mobile" class="d-lg-none">
@@ -92,16 +95,16 @@
                         </div>
                     </div>
                     <div id="social">
-                        <a href="https://www.linkedin.com/in/mehrab-poorzakaria-1b2492237/">
+                        <a href="https://www.linkedin.com/in/mehrab-poorzakaria-1b2492237/" target="_blank">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/mmehrab-pz">
+                        <a href="https://github.com/mmehrab-pz" target="_blank">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="https://www.instagram.com/mehrab.poorzakaria_web/">
+                        <a href="https://www.instagram.com/mehrab.poorzakaria_web/" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/message/KPKBI2KRNQMOK1">
+                        <a href="https://wa.me/message/KPKBI2KRNQMOK1" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
@@ -128,9 +131,398 @@
             <i class="fa-solid fa-chevron-left"></i>
         </div>
         <video id="strength-back" src="asset/img/back-video-8.mp4" autoplay muted loop></video>
-        <section></section>
     </section>
+    <!-- ---------------------------portfolio---------------------------- -->
+    <section id="portfolio">
+        <video id="portfolio-back" src="asset/img/back-video-8.mp4" autoplay muted loop></video>
+        <div id="portfolio-close" onclick="close_portfolio()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <section id="portfolio-box">
+            <div id="portfolio-title">
+                <div id="portfolio-title-banner">
+                    <!-- -------------------banner text----------------- -->
+                    <div>
+                        <h3>portfolio</h3>
+                        <p>
+                            let's check my projects. <br>
+                            also you can review my projects in github.
+                        </p>
+                        <a href="https://github.com/mmehrab-pz" target="_blank">
+                            <p>github</p>
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <!-- -------------------img----------------- -->
+                    <div>
+                        <figure>
+                            <img class="img-fluid" src="asset/img/blue-man.png" alt="#">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio-content" class="row">
+                <div id="portfolio-content-social" class="d-none d-lg-flex col-3 col-xxl-2">
+                    <a href="https://www.linkedin.com/in/mehrab-poorzakaria-1b2492237/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>linkedin</p>
+                    </a>
+                    <a href="https://www.instagram.com/mehrab.poorzakaria_web/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>instagram</p>
+                    </a>
+                    <a href="https://github.com/mmehrab-pz" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <p>github</p>
+                    </a>
+                    <a href="https://wa.me/message/KPKBI2KRNQMOK1" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>whatsapp</p>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                        <p>telegran</p>
+                    </a>
+                </div>
+                <div id="portfolio-content-project" class="col-12 col-lg-9 col-xxl-10">
+                    <div id="portfolio-project-filter">
+                        <h3 class="d-none d-lg-flex">
+                            all projects
+                        </h3>
+                        <ul>
+                            <li id="web" onclick="web()" class="active-filter-li">web template</li>
+                            <li id="trick" onclick="trick()">trick</li>
+                            <li id="js" onclick="js()">java script</li>
+                        </ul>
+                    </div>
+                    <div id="web-card" class="portfolio-content-cards list-x">
 
+                        <div class="card" style="width: 18rem;" onclick="modal()">
+                            <img src="asset/img/project-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 1</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 2</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 3</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 4</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-6.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 6</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-8.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 8</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-9.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 9</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-10.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 10</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-11.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 11</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-12.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 12</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-13.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 13</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-14.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 14</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-15.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 15</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-16.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 16</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-17.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 17</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-18.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 18</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-19.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 19</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-20.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 20</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="trick-card" style="display: none;" class="portfolio-content-cards list-x">
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-1.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 1</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-2.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 2</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-3.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 3</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-4.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 4</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-5.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 5</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-6.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 6</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-7.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 7</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-8.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 8</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/trick-9.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">trick 9</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/form-1.png..">
+                            <div class="card-body">
+                                <h5 class="card-title">form 1</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/form-2.png" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">form 2</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="js-card" style="display: none;" class="portfolio-content-cards list-x">
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 5</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="asset/img/project-7.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">project 7</h5>
+                                <p class="card-text">this project is not a responsive project so you can resize your
+                                    browser
+                                    window.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- ---------------------modals-------------------- -->
+        <div class="modaal">
+
+        </div>
+    </section>
 
 
 
@@ -407,6 +799,73 @@
         pointerX = null;
         pointerY = null;
 
+    }
+
+
+
+    // ---------------------------contact------------------------
+    function open_contact() {
+        document.getElementById('contact').style.transform = 'none';
+        document.getElementById('contact').style.left = '0';
+    }
+
+    function close_contact() {
+        document.getElementById('contact').style.transform = 'scaleX(0)';
+        document.getElementById('contact').style.left = '100%';
+    }
+    // ---------------------------strength------------------------
+    function open_strength() {
+        document.getElementById('strength').style.transform = 'none';
+        document.getElementById('strength').style.opacity = '1';
+        document.getElementById('strength').style.top = '0';
+    }
+
+    function close_strength() {
+        document.getElementById('strength').style.opacity = '0';
+        document.getElementById('strength').style.top = '100%';
+        document.getElementById('strength').style.transform = 'scaleY(0)';
+    }
+    // ---------------------------portfolio------------------------
+    function open_portfolio() {
+        document.getElementById('portfolio').style.transform = 'none';
+        document.getElementById('portfolio').style.right = '0';
+    }
+
+    function close_portfolio() {
+        document.getElementById('portfolio').style.transform = 'scaleX(0)';
+        document.getElementById('portfolio').style.right = '100%';
+    }
+
+    function web() {
+        document.getElementById('js').classList.remove('active-filter-li')
+        document.getElementById('trick').classList.remove('active-filter-li')
+        document.getElementById('web').classList.add('active-filter-li')
+        document.getElementById('trick-card').style.display = 'none'
+        document.getElementById('js-card').style.display = 'none'
+        document.getElementById('web-card').style.display = 'flex'
+    }
+
+    function trick() {
+        document.getElementById('js').classList.remove('active-filter-li')
+        document.getElementById('web').classList.remove('active-filter-li')
+        document.getElementById('trick').classList.add('active-filter-li')
+        document.getElementById('web-card').style.display = 'none'
+        document.getElementById('js-card').style.display = 'none'
+        document.getElementById('trick-card').style.display = 'flex'
+    }
+
+    function js() {
+        document.getElementById('web').classList.remove('active-filter-li')
+        document.getElementById('trick').classList.remove('active-filter-li')
+        document.getElementById('js').classList.add('active-filter-li')
+        document.getElementById('web-card').style.display = 'none'
+        document.getElementById('trick-card').style.display = 'none'
+        document.getElementById('js-card').style.display = 'flex'
+    }
+
+    function modal() {
+        document.getElementsByClassName('modaal')[0].style.transform = 'none';
+        document.getElementsByClassName('modaal')[0].style.opacity = '1';
     }
 </script>
 
